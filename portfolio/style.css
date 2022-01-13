@@ -41,17 +41,29 @@ body {
     background-position: center 0;
 }
 
+button {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    color: #fff;
+}
+
 .logo {
     background-image: url('./assets/svg/logo.svg');
     background-size: contain;
     background-repeat: no-repeat;
     transition: 0.3s;
     margin: 20px;
-  }
-  .logo:hover {
-    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
-    cursor: pointer;
-  }
+}
+
+.logo:hover {
+filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+cursor: pointer;
+}
 
 .nav-list {
     display: flex;
@@ -249,6 +261,33 @@ h1 {
     background-size: 32px 50px;
 }
 
+/* PORTFOLIO */
+.portfolio-btns {
+    text-align: center;
+    margin: 60px 0px;
+}
+
+.portfolio-btn {
+    width: 220px;
+    height: 55px;
+    border: 2px solid #bdae82;
+    background-color: transparent;
+    color: #bdae82;
+}
+
+#autumn {
+    color: #000;
+    background-color: #bdae82;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-basis: 1;
+    gap: 25px;
+}
 
 
 
