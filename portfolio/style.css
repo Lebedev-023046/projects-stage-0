@@ -192,7 +192,7 @@ h1 {
 }
 
 .section-title-4 {
-    width: 102px;
+    width: 142px;
 }
 
 /* SKILLS */
@@ -211,9 +211,9 @@ h1 {
     text-align: center;
 }
 
-.skill-item h2 {
+.skill-item div {
     margin: 100px 20px 0px 20px;
-    font-weight: bold;
+    font-weight: 700;
     line-height: 40px;
     font-size: 20px;
     width: 280px;
@@ -225,6 +225,7 @@ h1 {
     width: 280px;
     height: 72px;
     font-size: 18px;
+    line-height: 36px;
 }
 
 .skill-item:nth-child(1) {
@@ -314,4 +315,55 @@ h1 {
 .video-player-btn:hover {
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
     cursor: pointer;
+}
+
+/* PRICE */
+.price-varieties {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 60px;
+}
+
+.price-variety {
+    border: 2px solid #bdae82;
+    width: 450px;
+    height: 505px;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 28px;
+    margin-top: 43px;
+    line-height: 56px;
+}
+
+.price-value {
+    display: block;
+    margin: 20px 0px;
+    line-height: 48px;
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    color: #bdae82;
+}
+
+.price-detail {
+    display: block;
+    font-size: 18px;
+    line-height: 36px;
+}
+
+.query-btn {
+    width: 220px;
+    height: 55px;
+    margin-top: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    background-color: #bdae82;
+}
+
+.query-btn:hover {
+    cursor: pointer;
+    color: #fff;
 }
