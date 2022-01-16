@@ -26,15 +26,17 @@
             </div>
             <nav class="nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="" class="nav-link">Skills</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Price</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Contacts</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li class="nav-item"><a href="#video" class="nav-link">Video</a></li>
+                    <li class="nav-item"><a href="#price" class="nav-link">Price</a></li>
+                    <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
                 </ul>
             </nav>
             <div class="langs-switch">
-                <input class="input" type="radio" id="en" name="language" value="en"><label for="en" class="eng">en</label>/
-                <input class="input" type="radio" id="ru" name="language" value="ru" ><label for="ru" class="rus">ru</label>
+                <span class="eng">en</span>
+                <span>/</span>
+                <span class="rus">ru</span>
             </div>
         </div>
     </header>
@@ -51,31 +53,31 @@
                     </button>
                 </div>
             </section>
-            <section class="skills">
+            <section id="skills" class="skills">
                 <div class="wrapper">
                     <h2 class="section-title-1">Skills</h2>
                 </div>
                 <div class="skills-items">
                     <div class="skill-item">
-                        <div>Digital photography</div>
+                        <div class="skill-name">Digital photography</div>
                         <p class="skill-item-par">High-quality photos in the studio and on the nature</p> 
                     </div>
                     <div class="skill-item">
-                        <div>Video shooting</div>
+                        <div class="skill-name">Video shooting</div>
                         <p class="skill-item-par">Capture your moments so that they always stay with you</p>
                     </div>
                     <div class="skill-item">
-                        <div>Retouch</div>
+                        <div class="skill-name">Retouch</div>
                         <p class="skill-item-par">I strive to make photography surpass reality</p>
                     </div>
                     <div class="skill-item">
-                        <div>Audio</div>
+                        <div class="skill-name">Audio</div>
                         <p class="skill-item-par">Professional sounds recording for video, advertising, portfolio</p>
                     </div>
                 </div>
                 
             </section>
-            <section class="portfolio">
+            <section id="portfolio" class="portfolio">
                 <div class="wrapper">
                     <h2 class="section-title-2">Portfolio</h2>
                 </div>
@@ -87,32 +89,30 @@
                 </div>
                 <div class="images">
                     <img src="assets/img/portfolio-img.jpg" alt="couple">
-                    <img src="assets/img/portfolio-img (1).jpg" alt="sunshine">
-                    <img src="assets/img/portfolio-img (2).jpg" alt="child">
-                    <img src="assets/img/portfolio-img (3).jpg" alt="forest">
-                    <img src="assets/img/portfolio-img (4).jpg" alt="elderly">
-                    <img src="assets/img/portfolio-img (5).jpg" alt="phone">
+                    <img src="assets/img/portfolio-img-1.jpg" alt="sunshine">
+                    <img src="assets/img/portfolio-img-2.jpg" alt="child">
+                    <img src="assets/img/portfolio-img-3.jpg" alt="forest">
+                    <img src="assets/img/portfolio-img-4.jpg" alt="elderly">
+                    <img src="assets/img/portfolio-img-5.jpg" alt="phone">
                 </div>
             </section>
-            <section class="video">
+            <section id="video" class="video">
                 <div class="wrapper">
                     <h2 class="section-title-3">Video</h2>
                 </div>
                 <div class="video-player">
                     <img src="assets/img/video-player.jpg" alt="video">
                     <button class="video-player-btn"><img src="assets/svg/Play_hover.svg" alt="video-sterter"></button>
-                </div>
-                
-                
+                </div> 
             </section>
-            <section class="price">
+            <section id="price" class="price">
                 <div class="wrapper">
                     <h2 class="section-title-4">Price</h2>
                 </div> 
                 <div class="price-varieties">
                     <div class="price-variety">
                         <h3>Standard</h3>
-                        <span class="price-value">$500</span>
+                        <span class="price-value">500 $</span>
 
                         <span class="price-detail">One location</span>
                         <span class="price-detail">120 photos in color</span>
@@ -124,7 +124,7 @@
                     </div>
                     <div class="price-variety">
                         <h3>Premium</h3>
-                        <span class="price-value">$700</span>
+                        <span class="price-value">700 $</span>
 
                         <span class="price-detail">One or two locations</span>
                         <span class="price-detail">200 photos in color</span>
@@ -136,7 +136,7 @@
                     </div>
                     <div class="price-variety">
                         <h3>Gold</h3>
-                        <span class="price-value">$1000</span>
+                        <span class="price-value">1000 $</span>
 
                         <span class="price-detail">Three locations or more</span>
                         <span class="price-detail">300 photos in color</span>
@@ -149,7 +149,7 @@
                 </div>
                 
             </section>
-            <section class="contacts">
+            <section id="contacts" class="contacts">
                 <h2 class="section-title-5">Contact me</h2>
                 <input type="email" class="email-contact" placeholder="E-mail">
                 <input type="tel" class="tel-contact" placeholder="Phone">

@@ -64,7 +64,7 @@ cursor: pointer;
 }
 
 .nav-item {
-    padding: 0px 0px 0px 30px;
+    padding: 0px 2px 0px 29px;
     height: 50px;
     display: flex;
     align-items: center;
@@ -75,22 +75,23 @@ cursor: pointer;
     align-items: center;
     margin: 20px 20px 20px 0px;
     width: 70px;
-    height: 50px;
+    line-height: 50px;
+}
+
+.langs-switch:hover {
+    cursor: pointer;
 }
 
 .nav {
     margin-left: auto;
 }
 
-label {
-    cursor: pointer;
-}
 .eng {
-    padding: 0px 9px 0px 0px;
+    padding: 0px 9px 0px 1px;
 }
 
 .rus {
-    padding: 0px 0px 0px 8px;
+    padding: 0px 0px 0px 12px;
 }
 
 a {
@@ -212,7 +213,7 @@ h1 {
     justify-content: space-between;
     flex-wrap: wrap;
     height: 242px;
-    margin: 60px 0px 0px 0px;
+    margin: 60px 20px 0px 20px;
 }
 
 .skill-item {
@@ -222,13 +223,17 @@ h1 {
     text-align: center;
 }
 
-.skill-item div {
+.skill-name {
     margin: 100px 20px 0px 20px;
-    font-weight: 700;
+    /* font-weight: 700;
     line-height: 40px;
     font-size: 20px;
     width: 280px;
-    height: 40px;
+    height: 40px; */
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
 }
 
 .skill-item-par {
@@ -470,7 +475,11 @@ h3 {
     line-height: 50px;
     display: inline-flex;
     justify-content: space-between;
-    margin: 0px 0px 0px 20px;
+    margin: 0px 0px 0px 25px;
+}
+
+.git-margins {
+    margin: 0px 19px 0px -5px;
 }
 
 .rsschool {
