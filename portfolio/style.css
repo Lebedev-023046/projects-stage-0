@@ -289,6 +289,10 @@ h1 {
     background-color: #bdae82;
 }
 
+#autumn:hover {
+    color: #fff;
+}
+
 .images {
     display: flex;
     justify-content: center;
@@ -447,7 +451,59 @@ h3 {
 }
 
 .submit:hover {
+    cursor: pointer;
     color: #fff;
+}
+
+/* FOOTER  */
+.footer .container {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    line-height: 50px;
+}
+
+.github {
+    width: 182px;
+    line-height: 50px;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 0px 0px 0px 20px;
+}
+
+.rsschool {
+    width: 211px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.icons-contacts {
+    line-height: 50px;
+    width: 188px;
+    margin: 0px 20px 0px 0px;
+}
+
+.contacts-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.contact-item {
+    transition: .3s;
+
+}
+
+.contacts-img {
+    vertical-align: middle;
+}
+
+
+.contact-item:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+    cursor: pointer;
 }
 
 
