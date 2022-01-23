@@ -1,1 +1,7 @@
-console.log("100 баллов(110 баллов без сглаживания).\nВерстка валидная - 10\nВерстка семантическая - 20\nВёрстка соответствует макету  - 48\nТребования к css - 12\nИнтерактивность, реализуемая через css - 20")
+const hamburger = document.querySelector(".hamburger")
+
+const toggleMenu = () => {
+    hamburger.classList.toggle("open")
+}
+
+hamburger.addEventListener("click", toggleMenu)
