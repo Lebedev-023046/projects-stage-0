@@ -359,6 +359,10 @@ h1 {
     width: 100%;
 }
 
+.video-img-small {
+    display: none;
+}
+
 .video-player-btn {
     position: absolute;
     transition: 0.3s;
@@ -658,12 +662,12 @@ h3 {
     }
     
     .section-title-3 {
-        margin: 100px auto 0px auto;
-        width: 154px;
+        margin: 80px auto 50px auto;
+        width: 131px;
     }
     
     .section-title-4 {
-        width: 142px;
+        width: 122px;
     }
     
     .section-title-5 {
@@ -684,10 +688,10 @@ h3 {
 
     .skills-items {
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        justify-content: space-around;
         height: 520px;
-        margin: 36px 20px 0px 20px;
+        padding: 0px 20px;
+        margin: 36px 20px 13px;
     }
     
     .skill-item {
@@ -695,14 +699,9 @@ h3 {
         height: 224px;
         background-position: center top;
         text-align: center;
-    }
-
-    .skill-item:nth-child(2n+1) {
-        margin: 9px 22px 27px 40px;
-    }
-
-    .skill-item:nth-child(2n) {
-        margin: 9px 44px 27px 22px;
+        justify-content: center;
+        margin: 9px 0px 27px 0px;
+        padding: 0px 10px;
     }
     
     .skill-name {
@@ -714,11 +713,12 @@ h3 {
     }
     
     .skill-item-par {
-        margin: 20px 10px 8px;
+        text-align: center;
         width: 280px;
         height: 44px;
         font-size: 18px;
         line-height: 21.78px;
+        margin: 0 auto;
     }
 
     /* PORTFOLIO */
@@ -726,11 +726,11 @@ h3 {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-around;
         gap: 5px;
         margin: 50px auto 60px auto;
         width: 445px;
- 
+        height: auto;
     }
     
     .portfolio-btn {
@@ -765,6 +765,52 @@ h3 {
         flex-shrink: 1;
         flex-basis: 1;
         gap: 25px;
+        margin: 0 auto;
+    }
+
+    /* VIDEO */
+    .video {
+        max-height: 548px;
+    }
+    
+    .video-player {
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .video-player {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+
+    .video-img {
+        display: none;
+    }
+    
+    .video-img-small {
+        display: block;
+        max-width: 768px;
+        width: 100%;
+    }
+    
+    .video-player-btn {
+        position: absolute;
+        transition: 0.3s;
+        background: none;
+        border: none;
+    }
+
+    .play_hover_img {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .video-player-btn:hover {
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+        cursor: pointer;
     }
 }
 
