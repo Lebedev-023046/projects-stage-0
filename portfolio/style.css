@@ -669,17 +669,7 @@ h3 {
     .section-title-4 {
         width: 122px;
     }
-    
-    .section-title-5 {
-        width: 450px;
-        font-family: 'Merriweather', serif;
-        color: #bdae82;
-        padding-top: 60px;
-        line-height: 80px;
-        font-size: 40px;
-        margin: 0px 20px 0px 0px;
-        margin-left: auto;
-    }
+
     /* SKILLS */
 
     .skills {
@@ -826,6 +816,39 @@ h3 {
     .price-variety {
         width: 420px;
         height: 505px;
+    }
+
+    /* CONTACTS */
+
+    .section-title-5 {
+        line-height: 64px;
+        text-align: center;
+        font-size: 32px;
+        margin: 0px 20px 0px 0px;
+        margin: 0 auto;
+    }
+
+    .contacts {
+        margin-top: 80px;
+        background-size: auto 600px;
+        height: 600px;
+    }
+
+    .email-contact {
+        margin: 40px auto 20px;
+    }
+
+    .tel-contact {
+        margin: 0px auto 20px;
+    }
+
+    #message {
+        resize: none;
+        margin: 0 auto;
+    }
+
+    .submit {
+        margin: 30px auto;
     }
 }
 
