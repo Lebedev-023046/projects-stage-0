@@ -812,6 +812,21 @@ h3 {
         filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
         cursor: pointer;
     }
+
+    /* PRICE */
+
+    .price-varieties {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 50px;
+        margin-top: 50px;
+    }
+    
+    .price-variety {
+        width: 420px;
+        height: 505px;
+    }
 }
 
 
