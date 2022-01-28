@@ -320,14 +320,11 @@ h1 {
     color: #fff;
 }
 
-#autumn {
+.active {
     color: #000;
     background-color: #bdae82;
 }
 
-#autumn:hover {
-    color: #fff;
-}
 
 .images {
     display: flex;

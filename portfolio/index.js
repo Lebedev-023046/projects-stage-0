@@ -1,3 +1,5 @@
+// ADAPTIVEMENU
+
 const hamburger = document.querySelector(".hamburger")
 const navigation = document.querySelector(".nav-list")
 
@@ -19,4 +21,30 @@ const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach((el) => el.addEventListener('click', closeMenu));
 
 
-console.log('Всего баллов: 75 из 75.\nВёрстка соответствует макету. Ширина экрана 768px +48\nНи на одном из разрешений до 320px включительно не появляется горизонтальная полоса прокрутки +15\nНа ширине экрана 768рх и меньше реализовано адаптивное меню +22')
+// ACTIVE-BUTTON
+
+const portfolioBtns = document.querySelectorAll(".portfolio-btn")
+
+portfolioBtns.forEach(element => element.addEventListener("click", changeImage))
+
+function changeClassActive() {
+  portfolioBtns.forEach(element => element.addEventListener("click", () => {
+    portfolioBtns.forEach(element => element.classList.remove("active"))
+    element.classList.add('active')
+  }))
+}
+
+changeClassActive()
+
+
+// IMAGES-FROM-DIFFERENT-SEASONS
+
+portfolioImgs = document.querySelectorAll(".portfolio-img")
+
+function changeImage(event) {
+  if (event.target.classList.contains('portfolio-btn')) {
+    portfolioImgs.forEach((element, index) => element.src = `assets/img/${event.target.dataset.season}/${index + 1}.jpg`);
+  } 
+}
+
+
