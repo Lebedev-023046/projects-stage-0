@@ -57,3 +57,60 @@ seasons.forEach(element => {
     img.src = `./assets/img/${element}/${i}.jpg`;
   }
 })
+
+// LIGHT-THEME
+
+function makeLightTheme() {
+  
+  const sectionTitle1 = document.querySelector(".section-title-1")
+  const sectionTitle2 = document.querySelector(".section-title-2")
+  const sectionTitle3 = document.querySelector(".section-title-3")
+  const sectionTitle4 = document.querySelector(".section-title-4")
+ 
+  const sectionEng = document.querySelector(".eng")
+  const sectionSlash = document.querySelector(".slash")
+  const sectionRus = document.querySelector(".rus")
+  const sectionName = document.querySelector(".name")
+  const sectionDescr = document.querySelector(".description")
+ 
+  const sectionBody = document.querySelector("body")
+ 
+  const footer = document.querySelector("#footer")
+
+  const wrappers = document.querySelectorAll(".wrapper")
+
+
+  wrappers.forEach(element => {
+    element.classList.toggle("backimg-titles")
+  })
+
+  sectionsTitles = [sectionTitle1, sectionTitle2, sectionTitle3, sectionTitle4, sectionBody]
+
+  sectionsTitles.forEach(element => {
+    element.classList.toggle("light-theme")
+  })
+
+  const sectionLangsAndHireText = [sectionEng, sectionSlash, sectionRus, sectionName, sectionDescr]
+
+  sectionLangsAndHireText.forEach(element => {
+    element.style.color = '#fff'
+  })
+
+
+  portfolioBtns.forEach(element => {
+    element.classList.toggle("light-theme-hover")
+  })
+
+  footer.style.backgroundColor = '#000'
+
+}
+
+// SWITCHTHEMEFUNC
+
+const switchBtn = document.querySelector(".theme-switch-btn")
+switchBtn.addEventListener("click", makeLightTheme)
+
+
+
+
+
