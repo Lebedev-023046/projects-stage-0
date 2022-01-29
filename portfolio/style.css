@@ -82,6 +82,10 @@ body {
     cursor: pointer;
 }
 
+.lang-active {
+    color: #bdae82;
+}
+
 .eng {
     padding: 0px 9px 0px 1px;
 }
