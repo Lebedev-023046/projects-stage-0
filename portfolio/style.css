@@ -86,9 +86,9 @@ body {
     cursor: pointer;
 }
 
+
 .lang-active {
     color: #bdae82;
-}
 
 .eng {
     padding: 0px 9px 0px 1px;
@@ -647,6 +647,7 @@ h3 {
     cursor: pointer;
 }
 
+
 /* LIGHT-THEME */
 
 .light-theme {
@@ -671,7 +672,7 @@ h3 {
     .skills {
         height: 702px;
     }
-
+  
     .light-theme {
         background-color: #fff;
         color: #000;
@@ -690,7 +691,6 @@ h3 {
         background-image: linear-gradient(to top, #fff 39px, #000 39px, #000 41px, #fff 41px);
     }
 
-    
 }
 
 @media (max-width: 768px){
@@ -764,6 +764,7 @@ h3 {
     .wc {
         color: #fff;
     }
+
     
     .nav-item {
         line-height: 73px;
@@ -788,6 +789,7 @@ h3 {
         width: 89px;
         margin-left: auto;
     }
+
 
     .theme-switch {
         margin-right: 30px;
@@ -1163,6 +1165,7 @@ h3 {
     .header {
         width: 100%;
         margin: 0 auto;
+
     }
 
     .description {
@@ -1196,12 +1199,12 @@ h3 {
         width: 100%;
     }
 }
-
 @media (max-width: 500px) {
 
     .logo {
         margin: 20px 0px 20px 10px;
     }
+
 
     .hamburger {
         margin: 20px 10px 20px 0px;
