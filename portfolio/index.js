@@ -250,10 +250,6 @@ const getCurrentTheme = () => {
   return mainTheme
 } 
 
-switchBtn.addEventListener("click", () => {
-  
-})
-
 function setLocalStorage() {
   localStorage.setItem('lang', commonLang);
   mainTheme = getCurrentTheme()
