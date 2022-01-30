@@ -89,6 +89,7 @@ body {
 
 .lang-active {
     color: #bdae82;
+}
 
 .eng {
     padding: 0px 9px 0px 1px;
@@ -1137,6 +1138,7 @@ h3 {
         height: auto;
         margin-bottom: auto;
     }
+    
 }
 
 @media (max-width: 570px) {

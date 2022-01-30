@@ -238,6 +238,7 @@ const langBtns = document.querySelector(".langs-switch").addEventListener("click
   }
 })
 
+
 // LOCALSTORAGEINFO
 
 const getCurrentTheme = () => {
