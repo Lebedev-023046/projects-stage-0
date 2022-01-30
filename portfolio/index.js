@@ -94,9 +94,17 @@ function translate(lang) {
 
 const hamburger = document.querySelector(".hamburger")
 const navigation = document.querySelector(".nav-list")
+const burgerLines = document.querySelectorAll(".line")
+const sectionBody = document.querySelector("body")
 
 const toggleMenu = () => {
     hamburger.classList.toggle("open-icon")
+
+    if (sectionBody.classList.contains("light-theme")) {
+      burgerLines.forEach(element => {
+        element.classList.toggle("bgb")
+      })
+    }    
     navigation.classList.toggle("open")
 }
 
@@ -171,6 +179,13 @@ function makeLightTheme() {
 
   const wrappers = document.querySelectorAll(".wrapper")
 
+  const navList = document.querySelector(".nav-list")
+
+  navList.classList.toggle("bgcw")
+
+  navLinks.forEach(element => {
+    element.classList.toggle("bc")
+  })
 
   wrappers.forEach(element => {
     element.classList.toggle("backimg-titles")
@@ -185,7 +200,7 @@ function makeLightTheme() {
   const sectionLangsAndHireText = [sectionEng, sectionSlash, sectionRus, sectionName, sectionDescr]
 
   sectionLangsAndHireText.forEach(element => {
-    element.style.color = '#fff'
+    element.classList.add("wc")
   })
 
 
@@ -208,7 +223,9 @@ const langBtns = document.querySelector(".langs-switch").addEventListener("click
   const sectionEng = document.querySelector(".eng")
   const sectionSlash = document.querySelector(".slash")
   const sectionRus = document.querySelector(".rus")
+
   const langSwitchElems = [sectionEng, sectionSlash, sectionRus]
+
   langSwitchElems.forEach(element => {
     element.classList.remove("lang-active")
   })
@@ -218,6 +235,24 @@ const langBtns = document.querySelector(".langs-switch").addEventListener("click
   }
 })
 
+// BEAUTIFULBUTTONS
+
+var animateButton = function(e) {
+
+  e.preventDefault;
+  e.target.classList.remove('animate');
+  
+  e.target.classList.add('animate');
+  setTimeout(function(){
+    e.target.classList.remove('animate');
+  },700);
+};
+
+var bubblyButtons = document.getElementsByClassName("portfolio-btn");
+
+for (var i = 0; i < bubblyButtons.length; i++) {
+  bubblyButtons[i].addEventListener('click', animateButton, false);
+}
 
 
 
