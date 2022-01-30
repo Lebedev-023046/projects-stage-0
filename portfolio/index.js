@@ -210,6 +210,7 @@ function makeLightTheme() {
 
   footer.style.backgroundColor = '#000'
 
+  getCurrentTheme()
 }
 
 // SWITCHTHEMEFUNC
@@ -231,9 +232,46 @@ const langBtns = document.querySelector(".langs-switch").addEventListener("click
   })
   if (!(event.target === sectionSlash)){
     event.target.classList.add("lang-active")
+    commonLang = event.target.innerText
     translate(event.target.innerText)
   }
 })
+
+// LOCALSTORAGEINFO
+
+const getCurrentTheme = () => {
+  if (sectionBody.classList.contains("light-theme")) {
+    mainTheme = "light"
+  }else {
+    mainTheme = "black"
+  }
+  return mainTheme
+} 
+
+switchBtn.addEventListener("click", () => {
+  
+})
+
+function setLocalStorage() {
+  localStorage.setItem('lang', commonLang);
+  mainTheme = getCurrentTheme()
+  localStorage.setItem('theme', mainTheme)
+}
+window.addEventListener('beforeunload', setLocalStorage)
+
+
+function getLocalStorage() {
+  if(localStorage.getItem('lang') || (localStorage.getItem('theme')))  {
+    const lang = localStorage.getItem('lang');
+    translate(lang);
+    const theme = localStorage.getItem('theme');
+    if (theme === 'light') {
+      makeLightTheme()
+    }    
+  }
+}
+window.addEventListener('load', getLocalStorage)
+
 
 // BEAUTIFULBUTTONS
 
