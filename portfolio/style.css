@@ -78,9 +78,17 @@ body {
     font-weight: 700;
 }
 
+.wc {
+    color: #fff;
+}
+
 .langs-switch:hover {
     cursor: pointer;
 }
+
+
+.lang-active {
+    color: #bdae82;
 
 .eng {
     padding: 0px 9px 0px 1px;
@@ -88,6 +96,16 @@ body {
 
 .rus {
     padding: 0px 20px 0px 8px;
+}
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    margin-right: 21px;
+}
+
+.theme-switch:hover {
+    cursor: pointer;
 }
 
 .nav {
@@ -102,7 +120,7 @@ body {
 }
 
 
-.hamburger .line {
+.line {
     width: 50px;
     height: 5px;
     background-color: #fff;
@@ -201,7 +219,6 @@ h1 {
     width: 50%;
     margin: 0 auto;
     height: 80px;
-    
     background-image: linear-gradient(to top, #000 39px, #bdae82 39px, #bdae82 41px, #000 41px);
 }
 
@@ -314,20 +331,96 @@ h1 {
     font-family: 'Inter', sans-serif;
     cursor: pointer;
     transition: 0.3s;
+
+    display: inline-block;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    transition: transform ease-in 0.15s, box-shadow ease-in 0.5s;
+    box-shadow: 0 2px 25px rgba(189, 174, 130, 1);
+}
+
+.portfolio-btn:focus {
+  outline: 0;
+}
+
+.portfolio-btn:before, .portfolio-btn:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  z-index: -1000;
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+
+.portfolio-btn:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, rgba(189, 174, 130, 1) 20%, transparent 20%), radial-gradient(circle, transparent 20%, rgba(189, 174, 130, 1) 20%, transparent 30%), radial-gradient(circle, rgba(189, 174, 130, 1) 20%, transparent 20%), radial-gradient(circle, rgba(189, 174, 130, 1) 20%, transparent 20%), radial-gradient(circle, transparent 10%, rgba(189, 174, 130, 1) 15%, transparent 20%), radial-gradient(circle, rgba(189, 174, 130, 1) 20%, transparent 20%), radial-gradient(circle, rgba(189, 174, 130, 1) 20%, transparent 20%), radial-gradient(circle, rgba(189, 174, 130, 1) 20%, transparent 20%), radial-gradient(circle, rgba(189, 174, 130, 1) 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+
+.portfolio-btn:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, rgba(189, 174, 130, 1) 20%, transparent 20%), radial-gradient(circle, rgba(189, 174, 130, 1) 20%, transparent 20%), radial-gradient(circle, transparent 10%, rgba(189, 174, 130, 1) 15%, transparent 20%), radial-gradient(circle, rgba(189, 174, 130, 1) 20%, transparent 20%), radial-gradient(circle, rgba(189, 174, 130, 1) 20%, transparent 20%), radial-gradient(circle, rgba(189, 174, 130, 1) 20%, transparent 20%), radial-gradient(circle, rgba(189, 174, 130, 1) 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+
+.portfolio-btn:active {
+  transform: scale(0.9);
+  background-color: rgba(189, 174, 130, 1);
+  box-shadow: 0 2px 25px rgba(204, 204, 109, 0.5);
+}
+
+.portfolio-btn.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+
+.portfolio-btn.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+@keyframes topBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@keyframes bottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
 }
 
 .portfolio-btn:hover {
     color: #fff;
 }
 
-#autumn {
+.active {
     color: #000;
     background-color: #bdae82;
 }
 
-#autumn:hover {
-    color: #fff;
-}
 
 .images {
     display: flex;
@@ -499,6 +592,7 @@ h3 {
 }
 
 /* FOOTER  */
+
 .footer .container {
     height: 150px;
     display: flex;
@@ -553,10 +647,50 @@ h3 {
     cursor: pointer;
 }
 
+
+/* LIGHT-THEME */
+
+.light-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+.light-theme-hover {
+    color: #000;
+}
+
+.light-theme-hover:hover {
+    color: #fff;
+    background-color: #bdae82;
+}
+
+.backimg-titles {
+    background-image: linear-gradient(to top, #fff 39px, #000 39px, #000 41px, #fff 41px);
+}
+
 @media (max-width: 1320px) {
     .skills {
         height: 702px;
     }
+  
+    .light-theme {
+        background-color: #fff;
+        color: #000;
+    }
+    
+    .light-theme-hover {
+        color: #000;
+    }
+    
+    .light-theme-hover:hover {
+        color: #fff;
+        background-color: #bdae82;
+    }
+    
+    .backimg-titles {
+        background-image: linear-gradient(to top, #fff 39px, #000 39px, #000 41px, #fff 41px);
+    }
+
 }
 
 @media (max-width: 768px){
@@ -564,6 +698,29 @@ h3 {
     .container {
         max-width: 768px;
         margin: 0 auto;
+    }
+
+    .light-theme {
+        background-color: #fff;
+        color: #000;
+    }
+    
+    .light-theme-hover {
+        color: #000;
+    }
+    
+    .light-theme-hover:hover {
+        color: #fff;
+        background-color: #bdae82;
+    }
+    
+    .backimg-titles {
+        background-image: linear-gradient(to top, #fff 39px, #000 39px, #000 41px, #fff 41px);
+    }
+
+    .nav-list-light-theme {
+        background-color: #fff;
+        color: #000;
     }
 
     /* HERO */
@@ -584,8 +741,30 @@ h3 {
         transition: .5s;
         margin: 0px;
         padding: 134px 0px 0px 127px;
+    }
+
+    .bgcb {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .bgcw {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .bc {
+        color: #000;
+    }
+
+    .bgb {
         background-color: #000;
     }
+
+    .wc {
+        color: #fff;
+    }
+
     
     .nav-item {
         line-height: 73px;
@@ -609,6 +788,11 @@ h3 {
     .langs-switch {
         width: 89px;
         margin-left: auto;
+    }
+
+
+    .theme-switch {
+        margin-right: 30px;
     }
 
     .hamburger {
@@ -650,7 +834,7 @@ h3 {
 
     h1 {
         font-size: 32px;
-        width: 165px;
+        width: 265px;
         line-height: 64px;
         height: 64px;
         margin: 0px 0px 20px 0px;
@@ -678,8 +862,6 @@ h3 {
         width: 364px;
         margin: 0 auto;
         height: 80px;
-        
-        background-image: linear-gradient(to top, #000 39px, #bdae82 39px, #bdae82 41px, #000 41px);
     }
     
     .section-title-2, .section-title-3, .section-title-4 {
@@ -976,7 +1158,13 @@ h3 {
 @media (max-width: 500px) {
 
     .logo {
-        margin: 20px 0px 20px 20px;
+        margin: 20px 0px 20px 60px;
+    }
+
+    .header {
+        width: 100%;
+        margin: 0 auto;
+
     }
 
     .description {
@@ -1010,6 +1198,15 @@ h3 {
         width: 100%;
     }
 }
+@media (max-width: 500px) {
+
+    .logo {
+        margin: 20px 0px 20px 10px;
+    }
 
 
+    .hamburger {
+        margin: 20px 10px 20px 0px;
+    }
 
+}
