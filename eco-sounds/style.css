@@ -85,6 +85,10 @@ header {
     background-size: cover;
 }
 
+.audio-block {
+    display: none;
+}
+
 .play {
     border: none;
     width: 180px;
@@ -94,6 +98,10 @@ header {
     background-color: transparent;
     background-size: contain;
     transition: .3s;
+}
+
+.pause {
+    background-image: url("assets/svg/pause.svg");
 }
 
 .play:hover {
