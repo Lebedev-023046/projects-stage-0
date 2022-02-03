@@ -38,7 +38,7 @@ const playAudio = () => {
 playBtn.addEventListener("click", playAudio)
 
 const activeButton = (event) => {
-    playBtn.classList.remove("pause")
+    // playBtn.classList.remove("pause")
     if (event.target.classList.contains("bird-item")) {
         birdItemList.forEach(element => {
             element.classList.remove("bird-active")
@@ -46,6 +46,7 @@ const activeButton = (event) => {
         event.target.classList.add("bird-active")
         mainContainer.style.backgroundImage = `url(assets/img/${event.target.dataset.birdname}.jpg)`
         audio.src = `assets/audio/${event.target.dataset.birdname}.mp3`
+        playAudio()
     }
 }
 
