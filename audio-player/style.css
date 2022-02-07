@@ -8,7 +8,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.audio {
+audio {
     display: none;
 }
 
@@ -71,7 +71,7 @@ body{
 .timeline {
     background: #fff;
     width: 90%;
-    height: 4px;
+    height: 7px;
     cursor: pointer;
     position: relative;
     margin: 10px auto;
@@ -81,7 +81,7 @@ body{
     background: rgb(150, 129, 59);
     height: 100%;
     width: 0%;
-    transition: 0.5s;
+    transition: 0.25s;
 }
 
 .controls {
@@ -96,8 +96,11 @@ body{
 
 .play {
     height: 40px;
+    width: 40px;
     transition: .25s;
     border-radius: 50%;
+    background-size: contain;
+    background-image: url("assets/svg/play.png");
 }
 
 .play:hover {
@@ -107,8 +110,11 @@ body{
 
 .pause {
     height: 40px;
+    width: 40px;
     transition: .25s;
     border-radius: 50%;
+    background-size: contain;
+    background-image: url("assets/svg/pause.png");
 }
 
 .pause:hover {
@@ -118,8 +124,11 @@ body{
 
 .forward {
     height: 40px;
+    width: 40px;
     transition: .25s;
     border-radius: 50%;
+    background-size: contain;
+    background-image: url("assets/svg/forward.png");
 }
 
 .forward:hover {
@@ -129,8 +138,11 @@ body{
 
 .backward {
     height: 40px;
+    width: 40px;
     transition: .25s;
     border-radius: 50%;
+    background-size: contain;
+    background-image: url("assets/svg/backward.png");
 }
 
 .backward:hover {
