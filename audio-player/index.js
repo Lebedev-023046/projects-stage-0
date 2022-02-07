@@ -1,8 +1,10 @@
+let playNum = 0
+
 const song1 = {
     background: "assets/img/dontstartnow.png",
     picture:    "assets/img/dontstartnow.png",
     name:       "Don't Start Now",
-    executer:   "Dua Lipa",
+    executor:   "Dua Lipa",
     src:        "assets/audio/dontstartnow.mp3"
 }
 
@@ -10,7 +12,7 @@ const song2 = {
     background: "assets/img/rockmafia.jpg",
     picture:    "assets/img/rockmafia.jpg",
     name:       "Friends",
-    executer:   "Aura Dione feat. Rock Mafia",
+    executor:   "Aura Dione feat. Rock Mafia",
     src:        "assets/audio/friends.mp3"
 }
 
@@ -18,7 +20,7 @@ const song3 = {
     background: "assets/img/maynard.jpg",
     picture:    "assets/img/maynard.jpg",
     name:       "Royalty",
-    executer:   "Conor Maynard",
+    executor:   "Conor Maynard",
     src:        "assets/audio/royalty.mp3"
 }
 
@@ -26,7 +28,7 @@ const song4 = {
     background: "assets/img/lemonade.png",
     picture:    "assets/img/lemonade.png",
     name:       "Don't hurt yourself",
-    executer:   "Beyonce",
+    executor:   "Beyonce",
     src:        "assets/audio/beyonce.mp3"
 }
 
@@ -34,7 +36,7 @@ const song5 = {
     background: "assets/img/degraw.jpg",
     picture:    "assets/img/degraw.jpg",
     name:       "Fire",
-    executer:   "Gavin DeGraw",
+    executor:   "Gavin DeGraw",
     src:        "assets/audio/fire.mp3"
 }
 
@@ -42,7 +44,7 @@ const song6 = {
     background: "assets/img/greenday.jpg",
     picture:    "assets/img/greenday.jpg",
     name:       "Holiday",
-    executer:   "Green Day",
+    executor:   "Green Day",
     src:        "assets/audio/holiday.mp3"
 }
 
@@ -50,7 +52,7 @@ const song7 = {
     background: "assets/img/legend.jpg",
     picture:    "assets/img/legend.jpg",
     name:       "All of me",
-    executer:   "John Legend",
+    executor:   "John Legend",
     src:        "assets/audio/allofme.mp3"
 }
 
@@ -58,7 +60,7 @@ const song8 = {
     background: "assets/img/lsd.jpg",
     picture:    "assets/img/lsd.jpg",
     name:       "Genius",
-    executer:   "LSD feat. Sia, Diplo, Labrinth",
+    executor:   "LSD feat. Sia, Diplo, Labrinth",
     src:        "assets/audio/genius.mp3"
 }
 
@@ -66,7 +68,7 @@ const song9 = {
     background: "assets/img/rockmafia.jpg",
     picture:    "assets/img/rockmafia.jpg",
     name:       "Fly of dye",
-    executer:   "Rock Mafia",
+    executor:   "Rock Mafia",
     src:        "assets/audio/flyordye.mp3"
 }
 
@@ -122,6 +124,50 @@ const playSound = () => {
         audio.pause()
     }
 }
+
+//CHANGETIMEANDFILLPROGRESS
+setInterval(() => {
+    progress.style.width = `${audio.currentTime / audio.duration * 100}%`
+    const currentTime = document.querySelector(".current")
+    currentTime.textContent = getTimeCodeFromNum(audio.currentTime)
+})
+
+//CHANGESONG
+changeSong = () => {
+    const background = document.querySelector(".background")
+    const picture = document.querySelector(".audio-image")
+    const name = document.querySelector(".song-name")
+    const executor = document.querySelector(".exec-name")
+    const audio = document.querySelector("audio")
+
+    background.src = songs[playNum]['background']
+    picture.src = songs[playNum]['picture']
+    name.textContent = songs[playNum]['name']
+    executor.textContent = songs[playNum]['executor']
+    audio.src = songs[playNum]['src']
+}
+
+const forward = document.querySelector(".forward")
+const backward = document.querySelector(".backward")
+
+forward.addEventListener("click", () => {
+    playNum += 1;
+    if (playNum === 9) {
+        playNum = 0
+    }
+    changeSong()
+    playSound()
+})
+
+backward.addEventListener("click", () => {
+    playNum -= 1;
+    if (playNum === -1) {
+        playNum = 8
+    }
+    changeSong()
+    playSound()
+})
+
 
 
 play.addEventListener("click", playSwitsh)
