@@ -1,19 +1,19 @@
 let playNum = 0
 
 const song1 = {
-    background: "assets/img/dontstartnow.png",
-    picture:    "assets/img/dontstartnow.png",
-    name:       "Don't Start Now",
-    executor:   "Dua Lipa",
-    src:        "assets/audio/dontstartnow.mp3"
-}
-
-const song2 = {
     background: "assets/img/rockmafia.jpg",
     picture:    "assets/img/rockmafia.jpg",
     name:       "Friends",
     executor:   "Aura Dione feat. Rock Mafia",
     src:        "assets/audio/friends.mp3"
+}
+
+const song2 = {
+    background: "assets/img/dontstartnow.png",
+    picture:    "assets/img/dontstartnow.png",
+    name:       "Don't Start Now",
+    executor:   "Dua Lipa",
+    src:        "assets/audio/dontstartnow.mp3"
 }
 
 const song3 = {
@@ -150,10 +150,20 @@ changeSong = () => {
 const forward = document.querySelector(".forward")
 const backward = document.querySelector(".backward")
 
+const footer = document.querySelector(".footer")
+console.log(footer)
+const indexes = [1, 3, 6, 7]
+
 forward.addEventListener("click", () => {
     playNum += 1;
     if (playNum === 9) {
         playNum = 0
+    }
+    console.log(playNum)
+    if (indexes.includes(playNum)) {
+        footer.classList.add("footer2")
+    }else{
+        footer.classList.remove("footer2")
     }
     changeSong()
     playSound()
