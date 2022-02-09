@@ -17,8 +17,31 @@
    font-family: 'Montserrat', sans-serif;
 }
 
+/* MAIN */
+
 .main {
    flex: 1 1 auto;
+}
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.img {
+    width: 380px;
+    height: 230px;
+    margin: 20px 0px;
+    background-size: cover;
+}
+
+.img:hover {
+    cursor: pointer;
 }
 
 /* HEADER */
@@ -66,6 +89,7 @@
     height: 45px;
     width: 80%;
     border: 3px solid var(--main-color);
+    border-right: none;
     border-radius: 20px 0 0 20px;
     padding-left: 15px;
     outline: none;
@@ -81,6 +105,22 @@
     border: 3px solid var(--main-color);
     border-radius: 0 20px 20px 0;
     transition: 0.3s;
+}
+
+.cancel-button {
+    height: 45px;
+    width: 40px;
+    background-image: url("assets/search/cancel.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px solid var(--main-color);
+    border-left: none;
+    background-color: transparent;
+    transition: 0.3s;
+}
+
+.cancel-button:hover {
+    cursor: pointer;
 }
 
 .search-button:hover {
@@ -110,7 +150,7 @@
 }
 
 .github-link:hover {
-    color: #018192;
+    color: #a9ecf7;
 }
 
 .rsschool-link {
