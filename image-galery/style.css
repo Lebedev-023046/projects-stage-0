@@ -1,0 +1,128 @@
+:root{
+    --main-color: #00B4CC;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   font-family: 'Be Vietnam Pro', sans-serif;
+   font-family: 'Merriweather', serif;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+   flex: 1 1 auto;
+}
+
+/* HEADER */
+
+.header {
+    border-bottom: 10px solid var(--main-color);
+}
+
+.header-container, .footer-container {
+    height: 60px;
+    width: 100%;
+    margin:  0 auto;
+    padding: 0px 20px;
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.galery-name {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 40px;
+}
+
+.galery-name:before {
+    content: url("assets/logo/logo.svg");
+    margin-right: 20px;
+    height: 60px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.search {
+    height: 60px;
+    width: 370px;
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    height: 45px;
+    width: 80%;
+    border: 3px solid var(--main-color);
+    border-radius: 20px 0 0 20px;
+    padding-left: 15px;
+    outline: none;
+}
+
+.search-button {
+    height: 45px;
+    width: 40px;
+    background-color: var(--main-color);
+    background-image: url("assets/search/search.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px solid var(--main-color);
+    border-radius: 0 20px 20px 0;
+    transition: 0.3s;
+}
+
+.search-button:hover {
+    cursor: pointer;
+    filter: contrast(100%) brightness(1.08);
+}
+
+.search-input::placeholder {
+    color: #018192;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--main-color);
+}
+
+.github {
+    font-size: 25px;
+}
+
+.github-link {
+    text-decoration: none;
+    color: #000;
+    text-transform: capitalize;
+}
+
+.github-link:hover {
+    color: #018192;
+}
+
+.rsschool-link {
+    display: block;
+    width: 135px;
+    height: 60px;
+    background-image: url("assets/rs-school/rs_school.svg");
+    background-repeat: no-repeat;
+    transition: .3s;
+}
+
+.rsschool-link:hover {
+    cursor: pointer;
+    filter: invert(100%) sepia() saturate(5000%) hue-rotate(140deg) brightness(100%) contrast(100%);
+}
