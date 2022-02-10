@@ -1,3 +1,8 @@
+window.addEventListener("load", () => {
+    const url = "https://api.unsplash.com/search/photos?query=spring&per_page=30&orientation=landscape&client_id=Fq7hh0Mo_F3rW4iibqBcY3Eh__wCZa8k5mQroyg9hlU";
+    getData(url)
+})
+
 const galeryContainer = document.querySelector(".container")
 
 function createElement(imgData) {
@@ -13,9 +18,16 @@ async function getData(url) {
     const res = await fetch(url);
     const data = await res.json();
 
+    const container = document.querySelector(".container")
+    while (container.firstChild) {
+        container.removeChild(container.firstChild)
+    }
+
     data.results.forEach(element => {
         createElement(element.urls.regular)
     }); 
+
+    container.addEventListener("click", openImg)
   }
 
 const searchBtn = document.querySelector(".search-button")
@@ -27,6 +39,7 @@ const workflow = () => {
     getData(url)
 }
 
+
 searchBtn.addEventListener("click", workflow)
 input.addEventListener("keydown", (event) => {
     if (event.keyCode === 13) {
@@ -34,7 +47,21 @@ input.addEventListener("keydown", (event) => {
     }
 })
 
+//CLEARSEARCHAREA
 cancelBtn.addEventListener("click", () => {
     input.value = ''
 })
+
+const container = document.querySelector(".container")
+
+const openImg = (event) => {
+    const imageDivs = galeryContainer.querySelectorAll(".img")
+    if (event.target.classList.contains("img")) {
+        if (!(event.target.classList.contains("bigImg"))) {
+            event.target.classList.add("bigImg")
+        }else {
+            imageDivs.forEach(element => element.classList.remove("bigImg"))
+        }
+    }
+}
 

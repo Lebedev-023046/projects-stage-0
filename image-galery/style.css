@@ -31,13 +31,26 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .img {
+    display: flex;
     width: 380px;
-    height: 230px;
+    height: 254px;
     margin: 20px 0px;
     background-size: cover;
+}
+
+.bigImg {
+    width: 1240px;
+    height: 827px;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 0 0 0 99999px rgb(0 0 0 / 75%); 
 }
 
 .img:hover {
