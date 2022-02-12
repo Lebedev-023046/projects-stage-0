@@ -1,5 +1,5 @@
 window.addEventListener("load", () => {
-    const url = "https://api.unsplash.com/search/photos?query=spring&per_page=30&orientation=landscape&client_id=Fq7hh0Mo_F3rW4iibqBcY3Eh__wCZa8k5mQroyg9hlU";
+    const url = "https://api.unsplash.com/search/photos?query=corgi&per_page=30&orientation=landscape&client_id=Fq7hh0Mo_F3rW4iibqBcY3Eh__wCZa8k5mQroyg9hlU";
     getData(url)
 })
 
