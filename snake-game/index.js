@@ -85,7 +85,15 @@ const permGameStream = () => {
 
     ctx.fillStyle = 'white'
     ctx.font = "25px Arial"
-    ctx.fillText('Snake has returned, my dear.', box, box * 2)
+    ctx.fillText('Snake Game', box, box * 2)
+
+    ctx.fillStyle = 'white'
+    ctx.font = "25px Arial"
+    ctx.fillText('Score: ', box * 12, box * 2)
+
+    ctx.fillStyle = 'white'
+    ctx.font = "25px Arial"
+    ctx.fillText(score, box * 15, box * 2)
 
     let snakeX = snakeBody[0].x
     let snakeY = snakeBody[0].y
@@ -95,15 +103,43 @@ const permGameStream = () => {
         food = {
             x: Math.floor(Math.random() * 15 + 1) * box,
             y: Math.floor(Math.random() * 13 + 6) * box,
-        }  
+        } 
+        foodItem = foodList[Math.floor(Math.random() * 5)]
     }else {
         snakeBody.pop()
     }
 
+    // const tale = (head, arr) => {
+    //     for (let i=0; i<snakeBody.length; i++) {
+    //         if (head.x ===arr[i].x && head.y === arr[i].y) {
+    //             clearInterval(game)
+    //         }
+    //     }
+    // }
 
-    if (snakeX < box || snakeX > 15 * box || snakeY > 18 * box || snakeY < 6 * box) {
-        clearInterval(game)
+
+    // //ENDGAME
+    // if (snakeX < box || snakeX > 15 * box || snakeY > 18 * box || snakeY < 6 * box) {
+    //     clearInterval(game)
+    // }
+
+    //CONTINUEGAME 
+
+    //WORK
+    if (snakeY < 7 * box) {
+        snakeY = 19 * box
     }
+
+    else if (snakeY > 18 * box) {
+        snakeY = 7 * box
+    }
+
+    //WORK
+    else if (snakeX < box * 2) {
+        snakeX = 16 * box 
+    } 
+    
+    // if (snakeX > 15 * box) snakeX = box
 
 
     if (dir === 'left') snakeX -= box
@@ -115,6 +151,8 @@ const permGameStream = () => {
         x: snakeX,
         y: snakeY,
     }
+
+    // tale(newHead, snakeBody)
 
     snakeBody.unshift(newHead)
 
