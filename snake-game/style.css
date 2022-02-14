@@ -1,0 +1,50 @@
+body {
+    overflow: hidden;
+    background: linear-gradient(rgb(253, 207, 2), rgb(250, 233, 157));
+    position: relative;
+}
+
+.game {
+    display: flex;
+    max-width: 544px;
+    margin: 0 auto;
+}
+
+.footer-container {
+    height: 60px;
+    width: 100%;
+    margin:  0 auto;
+    padding: 0px 20px;
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.github {
+    font-size: 25px;
+}
+
+.github-link {
+   text-decoration: none;
+   color: #000;
+   text-transform: capitalize;
+}
+
+.github-link:hover {
+   color: #018192;
+}
+
+.rsschool-link {
+    display: block;
+    width: 135px;
+    height: 60px;
+    background-image: url("img/rs_school.svg");
+    background-repeat: no-repeat;
+    transition: .3s;
+}
+
+.rsschool-link:hover {
+    cursor: pointer;
+}
