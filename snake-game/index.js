@@ -13,23 +13,18 @@ foodSound.src = "audio/foodSound.mp3"
 //avocado
 const avocado = new Image()
 avocado.src = "img/avocado.png"
-
 //blueberry
 const blueberry = new Image()
 blueberry.src = "img/blueberry.png"
-
 //carrot
 const carrot = new Image()
 carrot.src = "img/carrot.png"
-
 //cookie
 const cookie = new Image()
 cookie.src = "img/cookie.png"
-
 //mango
 const mango = new Image()
 mango.src = "img/mango.png"
-
 //watermelon
 const watermelon = new Image()
 watermelon.src = "img/watermelon.png"
@@ -116,6 +111,17 @@ const permGameStream = () => {
         snakeBody.pop()
     }
 
+    const foodPos = (foodpos, arr) => {
+        for (let i=0; i<snakeBody.length; i++) {
+            if (foodpos.x ===arr[i].x && foodpos.y === arr[i].y) {
+                food = {
+                    x: Math.floor(Math.random() * 15 + 1) * box,
+                    y: Math.floor(Math.random() * 13 + 6) * box,
+                } 
+            }
+        }
+    }
+
     const tale = (head, arr) => {
         for (let i=0; i<snakeBody.length; i++) {
             if (head.x ===arr[i].x && head.y === arr[i].y) {
@@ -143,8 +149,7 @@ const permGameStream = () => {
         }
     }
 
-    // snakeY = 194
-    // //ENDGAME
+    //ENDGAME
     // if (snakeX < box || snakeX > 15 * box || snakeY > 18 * box || snakeY < 6 * box) {
     //     clearInterval(game)
     // }
@@ -179,6 +184,7 @@ const permGameStream = () => {
     }
 
     tale(newHead, snakeBody)
+    foodPos(food, snakeBody)
 
     snakeBody.unshift(newHead)
 
