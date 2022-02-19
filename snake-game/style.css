@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: linear-gradient(rgb(231, 189, 0), rgb(250, 233, 157));
+    height: 100vh;
+}
+
+.game {
+    display: flex;
+    max-width: 544px;
+    margin: 0 auto;
+}
+
+.tryagain {
+    display: none;
+    position: absolute;
+    color: rgb(255, 242, 170);
+    background-color: rgb(134, 97, 16);
+    border: none;
+    font-size: 45px;
+    width: 300px;
+    height: 75px;
+    border-radius: 40px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    top: 40%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+
+.tryagain:hover {
+    cursor: pointer;
+}
+
+.next-attempt {
+    border: none;
+
+    
+}
+
+.wrapper {
+    max-width: 544px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.settings {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 0;
+    margin: 20px;
+    margin-right: 32px;
+    background-image: url("img/settings.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0) invert(1);
+}
+
+.settings:hover {
+    cursor: pointer;
+}
+
+.footer-container {
+    height: 50px;
+    width: 100%;
+    margin:  0 auto;
+    padding: 0px 20px;
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.github {
+    font-size: 25px;
+}
+
+.github-link {
+   text-decoration: none;
+   color: #000;
+   text-transform: capitalize;
+}
+
+.github-link:hover {
+   color: #fabf1d;
+}
+
+.rsschool-link {
+    display: block;
+    width: 135px;
+    height: 60px;
+    background-image: url("img/rs_school.svg");
+    background-repeat: no-repeat;
+    transition: .3s;
+}
+
+.rsschool-link:hover {
+    cursor: pointer;
+}
